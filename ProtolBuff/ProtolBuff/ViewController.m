@@ -66,7 +66,7 @@
     User *user = [User parseFromData:data3 error:nil];
     NSLog(@"person:%@",user);
 
-    //socket测试
+    //socket测试此处如果不使用单例模式的话不会执行GCDAsySocketDelegate
     YBSocketClient *client = [YBSocketClient Share];
     [client createSocketConnect:@"" hostPort:0];
 }
